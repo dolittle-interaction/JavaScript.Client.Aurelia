@@ -1,17 +1,17 @@
 {
-  "name": "dolittle.javascript.client.aurelia",
+  "name": "@dolittle/aurelia",
   "author": "",
   "license": "ISC",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "transpile": "rm -rf dist && PACKAGE_DISTRIBUTION=true npx babel Source --ignore node_modules,**/for_* -d dist",
+    "prepublish": "yarn run transpile"
   },
   "devDependencies": {
     "dolittle.javascript.build": "https://github.com/dolittle/JavaScript.Build.git",
-    "dolittle.javascript.build.aurelia": "https://github.com/dolittle-interaction/JavaScript.Build.Aurelia.git",
-    "electron": "^3.0.8"
+    "dolittle.javascript.build.aurelia": "https://github.com/dolittle-interaction/JavaScript.Build.Aurelia.git"
   },
   "dependencies": {
     "aurelia-bootstrapper": "^2.2.0",
