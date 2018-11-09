@@ -17,3 +17,4 @@ describe('when command is not success with failed callback', () => {
     it('should call failed callback with command result', () => context.attribute.failed.calledWith(context.commandResult).should.be.true);
     it('should not call success callback with command result', () => context.attribute.success.called.should.be.false);
 });
+
