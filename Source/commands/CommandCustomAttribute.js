@@ -28,6 +28,7 @@ export class CommandCustomAttribute {
 
     bind() {
         this._element.onclick = () => {
+            if( !this.command && this.value ) this.command = this.value;
             if( typeof this.before == "function" ) this.before(this.command);
             this._commandCoordinator.handle(this.command).then(commandResult => {
                 if( commandResult.success ) {
