@@ -11,7 +11,10 @@ import { CommandCoordinator } from '@dolittle/commands';
 @inject(Element, CommandCoordinator)
 @customAttribute('command')
 export class CommandCustomAttribute {
-    //@bindable({ primaryProperty: true }) command;
+    @bindable({ primaryProperty: true }) command;
+    @bindable before;
+    @bindable success;
+    @bindable failed;
 
     /**
      * Initializes a new instance of {CommandCustomAttribute}
@@ -25,7 +28,13 @@ export class CommandCustomAttribute {
 
     bind() {
         this._element.onclick = () => {
-            this._commandCoordinator.handle(this.value).then(commandResult => {
+            if( typeof this.before == "function" ) this.before(this.command);
+            this._commandCoordinator.handle(this.command).then(commandResult => {
+                if( commandResult.success ) {
+                    if( typeof this.success == "function" ) this.success(commandResult);
+                } else {
+                    if( typeof this.failed == "function" ) this.failed(commandResult);
+                }
             });
         };
     }
