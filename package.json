@@ -2,7 +2,7 @@
   "name": "@dolittle/aurelia",
   "author": "",
   "license": "ISC",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
