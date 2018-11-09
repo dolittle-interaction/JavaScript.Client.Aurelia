@@ -11,7 +11,7 @@ import { CommandCoordinator } from '@dolittle/commands';
 @inject(Element, CommandCoordinator)
 @customAttribute('command')
 export class CommandCustomAttribute {
-    @bindable({ primaryProperty: true }) command;
+    //@bindable({ primaryProperty: true }) command;
 
     /**
      * Initializes a new instance of {CommandCustomAttribute}
@@ -25,7 +25,7 @@ export class CommandCustomAttribute {
 
     bind() {
         this._element.onclick = () => {
-            this._commandCoordinator.handle(this.command).then(commandResult => {
+            this._commandCoordinator.handle(this.value).then(commandResult => {
             });
         };
     }

@@ -20,6 +20,7 @@ describe("when button gets clicked and command is set", () => {
         }
         command = new Command();
         attribute = new CommandCustomAttribute(element, commandCoordinator);
+        attribute.value = command;
         attribute.bind();
 
         element.onclick();
