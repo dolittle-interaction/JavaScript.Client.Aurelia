@@ -23,10 +23,9 @@ export class CommandCustomAttribute {
         this._commandCoordinator = commandCoordinator;
     }
 
-    commandChanged(command) {
+    bind() {
         this._element.onclick = () => {
-            this._commandCoordinator.handle(command).then(commandResult => {
-
+            this._commandCoordinator.handle(this.command).then(commandResult => {
             });
         };
     }
