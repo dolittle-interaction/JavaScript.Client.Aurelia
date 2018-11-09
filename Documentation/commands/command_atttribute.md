@@ -26,5 +26,5 @@ export class ViewModel {
 This can then be hooked up using the command attribute as follows:
 
 ```html
-<button command="{{myCommand}}">Click me</button>
+<button command.bind="myCommand">Click me</button>
 ```
