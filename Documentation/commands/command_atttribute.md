@@ -121,7 +121,7 @@ The error callback gets called if there is a problem handling the `command`, for
 <button command="command.bind: myCommand; error.bind: commandError">Click me</button>
 ```
 
-On your view model you'd have, as an argument to the callback you'll get the command result object:
+On your view model you'd have, as an argument to the callback you'll get the exception that occurred:
 
 ```javascript
 import { MyCommand } from './MyCommand';
@@ -131,7 +131,7 @@ export class ViewModel {
         this.myCommand = new MyCommand();
     }
 
-    commandError(commandResult) {
+    commandError(exception) {
         /*
             Handle error
         */
