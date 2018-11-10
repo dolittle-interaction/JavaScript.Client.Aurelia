@@ -15,6 +15,7 @@ export class CommandCustomAttribute {
     @bindable before;
     @bindable success;
     @bindable failed;
+    @bindable error;
 
     /**
      * Initializes a new instance of {CommandCustomAttribute}
@@ -28,15 +29,19 @@ export class CommandCustomAttribute {
 
     bind() {
         this._element.onclick = () => {
-            if( !this.command && this.value ) this.command = this.value;
-            if( typeof this.before == "function" ) this.before(this.command);
-            this._commandCoordinator.handle(this.command).then(commandResult => {
-                if( commandResult.success ) {
-                    if( typeof this.success == "function" ) this.success(commandResult);
-                } else {
-                    if( typeof this.failed == "function" ) this.failed(commandResult);
-                }
-            });
+            try {
+                if (!this.command && this.value) this.command = this.value;
+                if (typeof this.before == "function") this.before(this.command);
+                this._commandCoordinator.handle(this.command).then(commandResult => {
+                    if (commandResult.success) {
+                        if (typeof this.success == "function") this.success(commandResult);
+                    } else {
+                        if (typeof this.failed == "function") this.failed(commandResult);
+                    }
+                });
+            } catch (ex) {
+                if( typeof this.error == "function" ) this.error(ex);
+            }
         };
     }
 }

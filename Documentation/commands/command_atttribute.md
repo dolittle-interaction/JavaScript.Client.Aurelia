@@ -112,3 +112,29 @@ export class ViewModel {
     }
 }
 ```
+
+### Error
+
+The error callback gets called if there is a problem handling the `command`, for instance connectivity or similar. You can hook it up easily as follows:
+
+```html
+<button command="command.bind: myCommand; error.bind: commandError">Click me</button>
+```
+
+On your view model you'd have, as an argument to the callback you'll get the command result object:
+
+```javascript
+import { MyCommand } from './MyCommand';
+
+export class ViewModel {
+    constructor() {
+        this.myCommand = new MyCommand();
+    }
+
+    commandError(commandResult) {
+        /*
+            Handle error
+        */
+    }
+}
+```
