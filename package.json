@@ -4,7 +4,17 @@
   "license": "ISC",
   "version": "1.0.16",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/esmodule/index.js",
+  "jspm": {
+    "registry":"npm",
+    "jspmPackage": true,
+    "format": "esm",
+    "main": "index",
+    "directories": {
+        "dist": "dist/systemjs"
+    }
+  },
   "scripts": {
     "build": "gulp build",
     "prepublish": "yarn build"
