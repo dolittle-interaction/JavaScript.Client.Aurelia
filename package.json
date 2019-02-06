@@ -19,6 +19,9 @@
     "build": "gulp build",
     "prepublish": "yarn build"
   },
+  "files":[
+    "dist"
+  ],
   "devDependencies": {
     "@dolittle/build.aurelia": "3.2.2"
   },
