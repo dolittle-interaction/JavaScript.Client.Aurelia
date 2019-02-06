@@ -6,11 +6,11 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "transpile": "rm -rf dist && PACKAGE_DISTRIBUTION=true npx babel Source --ignore node_modules,**/for_* -d dist",
-    "prepublish": "yarn run transpile"
+    "build": "gulp build",
+    "prepublish": "yarn build"
   },
   "devDependencies": {
-    "@dolittle/build.aurelia": "1.1.1"
+    "@dolittle/build.aurelia": "3.2.2"
   },
   "dependencies": {
     "@dolittle/commands": "^1.0.6",
