@@ -1,2 +1,2 @@
-const wallaby = require('dolittle.javascript.build.aurelia/wallaby')
-module.exports = wallaby('Source');
+const wallaby = require('@dolittle/build.aurelia/wallaby')
+module.exports = wallaby((config) => {});

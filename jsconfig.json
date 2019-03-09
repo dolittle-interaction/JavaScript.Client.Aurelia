@@ -1,5 +1,10 @@
 {
     "compilerOptions": {
-        "experimentalDecorators": true
-    }
+        "target": "es2018",
+        "experimentalDecorators": true,
+        "module": "commonjs"
+    },
+    "exclude": [
+        "node_modules"
+    ]
 }
