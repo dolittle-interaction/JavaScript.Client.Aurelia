@@ -6,6 +6,7 @@ author: einari
 weight: 2
 ---
 ## Background
+
 When using [Aurelia](https://aurelia.io) as your frontend framework and want to have the building blocks from Dolittle more
 accessible. This project gives you that.
 
