@@ -5,5 +5,8 @@ keywords: General
 author: einari
 weight: 2
 ---
+## Background
+When using [Aurelia](https://aurelia.io) as your frontend framework and want to have the building blocks from Dolittle more
+accessible. This project gives you that.
 
-This section describes the bridge for Aurelia into the JavaScript client support.
+The source code for this can be found [here](https://github.com/dolittle-interaction/JavaScript.Client.Aurelia).
