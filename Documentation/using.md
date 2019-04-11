@@ -4,8 +4,6 @@ description: Describes how to use the package
 keywords: Using
 author: einari
 ---
-## Using
-
 The bridge is a Aurelia plugin, which means that once you've configured it - it will become
 globally available.
 

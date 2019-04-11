@@ -4,8 +4,6 @@ description: Describes how to install the package
 keywords: Install
 author: einari
 ---
-## Installing
-
 The bridge is installed as an Aurelia plugin using NPM package:
 
 ```shell
