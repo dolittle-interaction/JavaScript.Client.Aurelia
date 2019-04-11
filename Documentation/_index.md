@@ -1,5 +1,5 @@
 ---
-title: Aurelia Client Support
+title: Client Support
 description: The home of the Aurelia Client Support
 keywords: General
 author: einari
