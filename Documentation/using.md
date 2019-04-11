@@ -9,7 +9,7 @@ author: einari
 The bridge is a Aurelia plugin, which means that once you've configured it - it will become
 globally available.
 
-Once you've [installed](./installing) it, you can simply use the plugin by configuring it during your
+Once you've [installed](../installing) it, you can simply use the plugin by configuring it during your
 setup of Aurelia, typically found in your `main.js` file.
 
 ```javascript
