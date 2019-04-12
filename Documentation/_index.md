@@ -1,5 +1,5 @@
 ---
-title: Client Support
+title: Bridge
 description: The home of the Aurelia Client Support
 keywords: General
 author: einari
