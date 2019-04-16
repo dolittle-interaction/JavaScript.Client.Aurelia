@@ -3,6 +3,7 @@ title: Using
 description: Describes how to use the package
 keywords: Using
 author: einari
+weight: 2
 ---
 The bridge is a Aurelia plugin, which means that once you've configured it - it will become
 globally available.
