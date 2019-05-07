@@ -31,21 +31,21 @@ export class CommandCustomAttribute {
         this._element.onclick = () => {
             try {
                 if (!this.command && this.value) this.command = this.value;
-                if (typeof this.before == "function") this.before(this.command);
+                if (typeof this.before == "function") this.before({command: this.command});
                 this._commandCoordinator
                     .handle(this.command)
                     .then(commandResult => {
                         if (commandResult.success) {
-                            if (typeof this.success == "function") this.success(commandResult);
+                            if (typeof this.success == "function") this.success({commandResult});
                         } else {
-                            if (typeof this.failed == "function") this.failed(commandResult);
+                            if (typeof this.failed == "function") this.failed({commandResult});
                         }
                     })
                     .catch(error => {
-                        if( typeof this.error == "function" ) this.error(error);
+                        if( typeof this.error == "function" ) this.error({error});
                     });
-            } catch (ex) {
-                if( typeof this.error == "function" ) this.error(ex);
+            } catch (error) {
+                if( typeof this.error == "function" ) this.error({error});
             }
         };
     }
