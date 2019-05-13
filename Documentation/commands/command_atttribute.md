@@ -40,7 +40,7 @@ to methods in your binding context, typically your viewmodel.
 The before callback gets called before the `command` is to be handled. You can hook it up easily as follows:
 
 ```html
-<button command="command.bind: myCommand; before.bind: beforeHandling">Click me</button>
+<button command="command.bind: myCommand; before.call: beforeHandling(command)">Click me</button>
 ```
 
 On your view model you'd have, as an argument to the callback you'll get the command instance:
@@ -66,7 +66,7 @@ export class ViewModel {
 The success callback gets called after the `command` has been handled and is considered a success. You can hook it up easily as follows:
 
 ```html
-<button command="command.bind: myCommand; success.bind: commandSuccess">Click me</button>
+<button command="command.bind: myCommand; success.call: commandSuccess(commandResult)">Click me</button>
 ```
 
 On your view model you'd have, as an argument to the callback you'll get the command result object:
@@ -92,7 +92,7 @@ export class ViewModel {
 The failed callback gets called after the `command` has been handled and is considered failed. You can hook it up easily as follows:
 
 ```html
-<button command="command.bind: myCommand; failed.bind: commandFailed">Click me</button>
+<button command="command.bind: myCommand; failed.call: commandFailed(error)">Click me</button>
 ```
 
 On your view model you'd have, as an argument to the callback you'll get the command result object:
@@ -118,7 +118,7 @@ export class ViewModel {
 The error callback gets called if there is a problem handling the `command`, for instance connectivity or similar. You can hook it up easily as follows:
 
 ```html
-<button command="command.bind: myCommand; error.bind: commandError">Click me</button>
+<button command="command.bind: myCommand; error.call: commandError(error)">Click me</button>
 ```
 
 On your view model you'd have, as an argument to the callback you'll get the exception that occurred:

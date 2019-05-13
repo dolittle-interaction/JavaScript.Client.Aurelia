@@ -13,6 +13,6 @@ describe('when handling with before callback', () => {
         context.element.onclick();
     }));
 
-    it('should call before callback with command', () => context.attribute.before.calledWith(context.command).should.be.true);
+    it('should call before callback with command', () => context.attribute.before.calledWith({command: context.command}).should.be.true);
 });
 
