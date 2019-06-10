@@ -4,6 +4,7 @@ description: The home of the Aurelia Client Support
 keywords: General
 author: einari
 weight: 2
+repository: https://github.com/dolittle-interaction/JavaScript.Client.Aurelia
 ---
 When using [Aurelia](https://aurelia.io) as your frontend framework and want to have the building blocks from Dolittle more
 accessible. This project gives you that.
