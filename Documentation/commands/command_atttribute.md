@@ -3,6 +3,8 @@ title: Command Attribute
 description: Using the command attribute
 keywords: General
 author: einari
+aliases: 
+    - /interaction/aurelia/javascript.client.aurelia/installing/command_attribute
 ---
 ## Background
 
