@@ -1,3 +1,4 @@
+import { CommandCoordinator } from '@dolittle/commands';
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Dolittle. All rights reserved.
  *  Licensed under the MIT License. See LICENSE in the project root for license information.
@@ -6,6 +7,13 @@ import { CommandCustomAttribute } from '../../CommandCustomAttribute';
 import { Command } from '@dolittle/commands';
 
 export class a_command_custom_attribute {
+  
+  command: Command;
+  element: any;
+  commandCoordinator: any;
+  commandResult: any;
+  attribute: any;
+  
     constructor() {
         this.commandResult = {
             success: true

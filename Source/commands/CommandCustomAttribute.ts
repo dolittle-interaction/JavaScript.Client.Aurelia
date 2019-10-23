@@ -11,6 +11,11 @@ import { CommandCoordinator } from '@dolittle/commands';
 @inject(Element, CommandCoordinator)
 @customAttribute('command')
 export class CommandCustomAttribute {
+
+  _element: HTMLElement;
+  _commandCoordinator: CommandCoordinator;
+  value: any;
+  
     @bindable({ primaryProperty: true }) command;
     @bindable before;
     @bindable success;
@@ -22,7 +27,7 @@ export class CommandCustomAttribute {
      * @param {HTMLElement} element The element that has the attribute
      * @param {CommandCoordinator} commandCoordinator The {CommandCoordinator} used to coordinate the commands
      */
-    constructor(element, commandCoordinator) {
+    constructor(element: HTMLElement, commandCoordinator:CommandCoordinator) {
         this._element = element;
         this._commandCoordinator = commandCoordinator;
     }

@@ -5,7 +5,7 @@
 import { a_command_custom_attribute } from './given/a_command_custom_attribute';
 
 describe('when command is not success with failed callback', () => {
-  let context = new a_command_custom_attribute();
+  let context: any = new a_command_custom_attribute();
 
   beforeEach(() => {
     context.commandResult.success = true;

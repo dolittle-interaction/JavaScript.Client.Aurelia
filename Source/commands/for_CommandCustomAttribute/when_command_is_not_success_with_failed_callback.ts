@@ -4,15 +4,17 @@
  *--------------------------------------------------------------------------------------------*/
 import { a_command_custom_attribute } from './given/a_command_custom_attribute';
 
-describe('when handling with before callback', () => {
-    let context = new a_command_custom_attribute();
+describe('when command is not success with failed callback', () => {
+    let context: any = new a_command_custom_attribute();
 
     (beforeEach(() => {
         context.commandResult.success = false;
-        context.attribute.before = sinon.stub();
+        context.attribute.success = sinon.stub();
+        context.attribute.failed = sinon.stub();
         context.element.onclick();
     }));
 
-    it('should call before callback with command', () => context.attribute.before.calledWith({command: context.command}).should.be.true);
+    it('should call failed callback with command result', () => context.attribute.failed.calledWith({commandResult: context.commandResult}).should.be.true);
+    it('should not call success callback with command result', () => context.attribute.success.called.should.be.false);
 });
 
