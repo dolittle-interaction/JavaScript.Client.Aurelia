@@ -4,15 +4,12 @@
  *--------------------------------------------------------------------------------------------*/
 import { a_command_custom_attribute } from './given/a_command_custom_attribute';
 
-describe('when handling with before callback', () => {
+describe('when element gets clicked and command is set', () => {
     let context = new a_command_custom_attribute();
 
-    (beforeEach(() => {
-        context.commandResult.success = false;
-        context.attribute.before = sinon.stub();
-        context.element.onclick();
-    }));
+    beforeEach(() => {
+        context.element.onclick!({} as MouseEvent);
+    });
 
-    it('should call before callback with command', () => context.attribute.before.calledWith({command: context.command}).should.be.true);
+    it('should pass the command along to handle', () => (context.commandCoordinator.handle as sinon.SinonStub).calledWith(context.command).should.be.true);
 });
-
