@@ -1,3 +1,5 @@
+Distribution
+*.d.ts
 # Logs
 logs
 *.log

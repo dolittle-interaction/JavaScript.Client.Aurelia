@@ -1,0 +1,4 @@
+{
+    "extends": "./node_modules/@dolittle/typescript.build/TSConfig/tsconfig.base.json",
+}
+  
