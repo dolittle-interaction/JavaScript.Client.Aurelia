@@ -13,10 +13,10 @@ import { bindable, customAttribute, autoinject,  } from 'aurelia-framework';
 export class CommandCustomAttribute  {
     value!: ICommand
     @bindable({ primaryProperty: true }) command!: ICommand;
-    @bindable before!: <TCommand extends ICommand>(command: TCommand) => void;
-    @bindable success!: (commandResponse: CommandResponse) => void;
-    @bindable failed!: (commandResponse: CommandResponse) => void;
-    @bindable error!: (error: Error) => void;
+    @bindable before!: <TCommand extends ICommand>(options: {command: TCommand}) => void;
+    @bindable success!: (options: {commandResult: CommandResponse}) => void;
+    @bindable failed!: (options: {commandResult: CommandResponse}) => void;
+    @bindable error!: (options: {error: Error}) => void;
 
     /**
      * Initializes a new instance of {CommandCustomAttribute}
@@ -29,20 +29,20 @@ export class CommandCustomAttribute  {
         this._element.onclick = () => {
             try {
                 if (!this.command && this.value) this.command = this.value;
-                if (typeof this.before === "function") this.before(this.command);
+                if (typeof this.before === "function") this.before({command: this.command});
                 this._commandCoordinator.handle(this.command)
-                    .then(commandResponse => {
-                        if (commandResponse.success) {
-                            if (typeof this.success === "function") this.success(commandResponse);
+                    .then(commandResult => {
+                        if (commandResult.success) {
+                            if (typeof this.success === "function") this.success({commandResult});
                         } else {
-                            if (typeof this.failed === "function") this.failed(commandResponse);
+                            if (typeof this.failed === "function") this.failed({commandResult});
                         }
                     })
                     .catch((error: Error) => {
-                        if (typeof this.error === "function") this.error(error);
+                        if (typeof this.error === "function") this.error({error});
                     });
             } catch (error) {
-                if (typeof this.error === "function") this.error(error);
+                if (typeof this.error === "function") this.error({error});
             }
         };
     }
