@@ -15,7 +15,7 @@ describe('when command is not success with failed callback', () => {
         context.element.onclick!({} as any);
     });
 
-    it('should call failed callback with command result', () => (context.attribute.failed as sinon.SinonStub).calledWith(context.commandResponse).should.be.true);
+    it('should call failed callback with command result', () => (context.attribute.failed as sinon.SinonStub).calledWith({commandResult: context.commandResponse}).should.be.true);
     it('should not call success callback with command result', () => (context.attribute.success as sinon.SinonStub).called.should.be.false);
 });
 

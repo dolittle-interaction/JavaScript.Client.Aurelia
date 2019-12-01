@@ -25,5 +25,5 @@ describe('when command coordinator promise throws exception with error callback'
         }, 100);
     });
 
-    it('should call error callback with exception', () => (context.attribute.error as sinon.SinonStub).calledWith(exception).should.be.true);
+    it('should call error callback with exception', () => (context.attribute.error as sinon.SinonStub).calledWith({error: exception}).should.be.true);
 });

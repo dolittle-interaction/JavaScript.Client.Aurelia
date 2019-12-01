@@ -14,6 +14,6 @@ describe('when handling with before callback', () => {
         context.element.onclick!({} as MouseEvent);
     });
 
-    it('should call before callback with command', () => (context.attribute.before as sinon.SinonStub).calledWith(context.command).should.be.true);
+    it('should call before callback with command', () => (context.attribute.before as sinon.SinonStub).calledWith({command: context.command}).should.be.true);
 });
 
