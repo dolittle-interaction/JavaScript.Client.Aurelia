@@ -6,7 +6,7 @@ import { a_command_custom_attribute } from './given/a_command_custom_attribute';
 import sinon from 'sinon';
 
 describe('when command is not success with failed callback', () => {
-    let context = new a_command_custom_attribute();
+    const context = new a_command_custom_attribute();
 
     beforeEach(() => {
         (context.commandResponse as any).success = false;

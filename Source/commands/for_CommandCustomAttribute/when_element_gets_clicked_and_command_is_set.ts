@@ -5,7 +5,7 @@
 import { a_command_custom_attribute } from './given/a_command_custom_attribute';
 
 describe('when element gets clicked and command is set', () => {
-    let context = new a_command_custom_attribute();
+    const context = new a_command_custom_attribute();
 
     beforeEach(() => {
         context.element.onclick!({} as MouseEvent);
