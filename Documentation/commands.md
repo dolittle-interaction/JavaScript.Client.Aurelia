@@ -1,14 +1,18 @@
 ---
-title: Command Attribute
-description: Using the command attribute
+title: Commands
+description: Using commands and their attributes
 keywords: General
 author: einari
+weight: 2
+aliases:
+    - /interaction/aurelia/aurelia-clinet/commands/command_attribute/
 ---
+
 ## Background
 
 When you're working with commands, you typically need to fire off these as interaction from a user.
 Instead of you having to coordinate this in your view model, you can let the coordination be dealt with for you.
-Once you've [installed](../../installing) and have [configured](../../using) the plugin, you can start using
+Once you've [installed](../../get_started) the plugin, you can start using
 the command attribute on elements that typically are clickable. Assuming you have a command instance in your
 view model sitting as a property that can be accessed in the view in the binding context:
 
