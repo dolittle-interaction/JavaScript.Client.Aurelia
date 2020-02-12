@@ -1,6 +1,5 @@
 ---
 title: Get started
-url: /interaction/aurelia/aurelia-client/bridge/
 description: The home of the Aurelia Client Support
 keywords: General
 author: einari
@@ -8,6 +7,7 @@ weight: 1
 repository: https://github.com/dolittle-interaction/JavaScript.Client.Aurelia
 aliases:
     - /interaction/aurelia/aurelia-client/get_started/
+    - /interaction/aurelia/aurelia-client/bridge/
 ---
 
 When using [Aurelia](https://aurelia.io) as your frontend framework and want to have the building blocks from Dolittle more
