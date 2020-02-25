@@ -4,6 +4,7 @@ description: Using commands and their attributes
 keywords: General
 author: einari
 weight: 2
+repository: https://github.com/dolittle-interaction/JavaScript.Client.Aurelia
 aliases:
     - /interaction/aurelia/aurelia-clinet/commands/command_attribute/
 ---
