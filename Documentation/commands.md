@@ -6,7 +6,9 @@ author: einari
 weight: 2
 repository: https://github.com/dolittle-interaction/JavaScript.Client.Aurelia
 aliases:
-    - /interaction/aurelia/aurelia-clinet/commands/command_attribute/
+    - /interaction/aurelia/aurelia-client/commands/command_attribute/
+    - /interaction/aurelia/aurelia-client/commands/command_attribute/
+    - /interaction/aurelia/aurelia-client/commands/
 ---
 
 ## Background

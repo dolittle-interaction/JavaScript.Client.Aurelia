@@ -7,6 +7,7 @@ weight: 1
 repository: https://github.com/dolittle-interaction/JavaScript.Client.Aurelia
 aliases:
     - /interaction/aurelia/aurelia-client/get_started/
+    - /interaction/aurelia/aurelia-client/get-started/
     - /interaction/aurelia/aurelia-client/bridge/
 ---
 
