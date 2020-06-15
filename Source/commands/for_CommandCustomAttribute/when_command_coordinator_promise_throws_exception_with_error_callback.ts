@@ -2,9 +2,9 @@
  *  Copyright (c) Dolittle. All rights reserved.
  *  Licensed under the MIT License. See LICENSE in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { a_command_custom_attribute } from './given/a_command_custom_attribute';
-import sinon from 'sinon';
 import { ICommand } from '@dolittle/commands';
+import sinon from 'sinon';
+import { a_command_custom_attribute } from './given/a_command_custom_attribute';
 
 describe('when command coordinator promise throws exception with error callback', () => {
     const context = new a_command_custom_attribute();
@@ -12,9 +12,9 @@ describe('when command coordinator promise throws exception with error callback'
 
     beforeEach(done => {
         context.commandCoordinator.handle = (command: ICommand) => {
-        return new Promise((resolve, reject) => {
-            throw exception;
-        });
+            return new Promise((resolve, reject) => {
+                throw exception;
+            });
         };
 
         (context.commandResponse as any).success = true;
