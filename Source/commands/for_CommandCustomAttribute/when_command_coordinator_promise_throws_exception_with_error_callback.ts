@@ -7,7 +7,7 @@ import sinon from 'sinon';
 import { ICommand } from '@dolittle/commands';
 
 describe('when command coordinator promise throws exception with error callback', () => {
-    let context = new a_command_custom_attribute();
+    const context = new a_command_custom_attribute();
     const exception = 'something went wrong';
 
     beforeEach(done => {

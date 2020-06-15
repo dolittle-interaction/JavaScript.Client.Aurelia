@@ -11,7 +11,7 @@ import { bindable, customAttribute, autoinject,  } from 'aurelia-framework';
 @autoinject
 @customAttribute('command')
 export class CommandCustomAttribute  {
-    value!: ICommand
+    value!: ICommand;
     @bindable({ primaryProperty: true }) command!: ICommand;
     @bindable before!: <TCommand extends ICommand>(options: {command: TCommand}) => void;
     @bindable success!: (options: {commandResult: CommandResponse}) => void;

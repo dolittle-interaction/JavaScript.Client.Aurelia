@@ -9,11 +9,11 @@ import { CommandCustomAttribute } from '../../CommandCustomAttribute';
 import sinon from 'sinon';
 
 export class a_command_custom_attribute {
-    commandResponse: CommandResponse
-    element: HTMLElement
-    commandCoordinator: CommandCoordinator
-    command: ICommand
-    attribute: CommandCustomAttribute
+    commandResponse: CommandResponse;
+    element: HTMLElement;
+    commandCoordinator: CommandCoordinator;
+    command: ICommand;
+    attribute: CommandCustomAttribute;
     constructor() {
         this.commandResponse = {
             success: true
@@ -25,7 +25,7 @@ export class a_command_custom_attribute {
                     callback(this.commandResponse);
                 }
             })
-        }
+        };
 
         this.command = new Command(Guid.create());
         this.attribute = new CommandCustomAttribute(this.element, this.commandCoordinator);
